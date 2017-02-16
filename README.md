@@ -20,7 +20,7 @@ Take a look at the "development" branch to see what's up.
 
 ## Installation
 
-Drag and drop the **application/libraries/Format.php** and **application/libraries/REST_Controller.php** files into your application's directories. To use `require_once` it at the top of your controllers to load it into the scope. Additionally, copy the **rest.php** file from **application/config** in your application's configuration directory.
+Drag and drop the **application/libraries/Format.php** and **application/libraries/REST_Controller.php** files into your application's directories. To use, do `require_once` only to the **REST_Controller.php** at the top of your controllers to load it into the scope. Additionally, copy the **rest.php** file from **application/config** in your application's configuration directory.
 
 ## Handling Requests
 
@@ -29,6 +29,9 @@ When your controller extends from `REST_Controller`, the method names will be ap
 This allows you to implement a RESTful interface easily:
 
 ```php
+
+require_once(APPPATH . 'libraries/REST_Controller.php');
+
 use Restserver\Libraries\REST_Controller;
 
 class Books extends REST_Controller
